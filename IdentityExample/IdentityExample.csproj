@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityExample.Core\IdentityExample.Core.csproj" />
+    <ProjectReference Include="..\IdentityExample.DataLayer\IdentityExample.DataLayer.csproj" />
+  </ItemGroup>
+
+</Project>
