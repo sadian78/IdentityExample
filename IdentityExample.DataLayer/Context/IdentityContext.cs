@@ -9,16 +9,18 @@ namespace IdentityExample.DataLayer.Context
 {
     public class IdentityContext
     {
-        public async Task<Client> GetClient()
+        //Design Patten SingleTon
+        public Client Client { get; set; }
+        public static IdentityContext current { get; } = new IdentityContext();
+        public IdentityContext()
         {
-            Client client = new Client()
+            Client = new Client()
             {
                 Age = 25,
                 FirstName = "sadian",
-                LastName="tohidian",
-                PhoneNumber="09000000000"
+                LastName = "tohidian",
+                PhoneNumber = "09000000000"
             };
-            return client;
-        } 
+        }
     }
 }

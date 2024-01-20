@@ -28,8 +28,8 @@ namespace IdentityExample.Core.Services.Repository
             if (FixText.FixEmail(model.EmailAddress)== email && model.PassWord == password)
             {
                 informationClient = new InformationClient();
-                IdentityContext setData = new IdentityContext();
-                var client = await setData.GetClient();
+                //Use Context (With Design Pattern SingleTon)
+                var client = IdentityContext.current.Client;
                 informationClient.Age = client.Age;
                 informationClient.FirstName = client.FirstName;
                 informationClient.LastName = client.LastName;
